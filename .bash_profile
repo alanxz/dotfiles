@@ -7,4 +7,6 @@ fi
 
 # User specific environment and startup programs
 
+export PATH=$PATH:$HOME/.dotfiles/bin
+export MANPATH=$MANPATH:$HOME/.dotfiles/man
 
