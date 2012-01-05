@@ -1,5 +1,5 @@
 [user]
-	email = alan.antonuk@gmail.com
 	name = Alan Antonuk
-[core]
-	autocrlf = input
+	email = aega@.med.umich.edu
+[color]
+	ui = auto
