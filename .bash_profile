@@ -7,9 +7,4 @@ fi
 
 # User specific environment and startup programs
 
-export PATH=$PATH:$HOME/.dotfiles/bin
-export MANPATH=$MANPATH:$HOME/.dotfiles/man
-
-if [ -f ~/.hosts ]; then
-    export HOSTFILE=~/.hosts
-fi
+# Put nothing here. Unless its for non-X11 ONLY
