@@ -93,28 +93,32 @@ set cindent						" automatic indenting see ':h C-indenting' for comparison
 
 
 " Setup vundle
-set runtimepath+=~/.vim/bundle/vundle/
-call vundle#rc()
+"set runtimepath+=~/.vim/bundle/vundle/
+"call vundle#rc()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+"Bundle 'gmarik/vundle'
 
 " ClangComplete
-Bundle 'Rip-Rip/clang_complete'
-let g:clang_auto_select=1
-let g:clang_complete_auto=1
-let g:clang_hl_errors=1
-let g:clang_snippets=1
-let g:clang_use_library=1
-let g:clang_library_path='/usr/local/lib'
+"Bundle 'Rip-Rip/clang_complete'
+"let g:clang_auto_select=1
+"let g:clang_complete_auto=1
+"let g:clang_hl_errors=1
+"let g:clang_snippets=1
+"let g:clang_use_library=1
+"let g:clang_library_path='/usr/local/lib'
 "let g:clang_debug=1
 
 " a - alternate between h/cpp files
 "Bundle 'a'
 
 " haskellmode
-Bundle 'lukerandall/haskellmode-vim'
-au BufEnter *.hs compiler ghc
+"Bundle 'lukerandall/haskellmode-vim'
+"au BufEnter *.hs compiler ghc
 
+
+au BufNewFile,BufRead *.txx set filetype=cpp
+" Kill the annoying wrap feature of vim wtih *.txt
+au BufNewFile,BufRead CMakeLists.txt set filetype=cmake textwidth=0
 
 filetype plugin indent on
