@@ -1,0 +1,9 @@
+colorscheme solarized
+set background=dark
+
+let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1}
+
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+set expandtab
