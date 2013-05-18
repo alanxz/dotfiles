@@ -1,5 +1,11 @@
 [user]
+	email = alan.antonuk@gmail.com
 	name = Alan Antonuk
-	email = aega@.med.umich.edu
+[core]
+	autocrlf = input
 [color]
 	ui = auto
+[merge]
+	tool = vimdiff
+[bash]
+	showDirtyState = true
