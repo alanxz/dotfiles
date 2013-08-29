@@ -4,8 +4,6 @@ UnBundle 'spf13/vim-autoclose'
 colorscheme solarized
 set background=dark
 
-let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1}
-
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4
@@ -13,3 +11,6 @@ set expandtab
 
 " Turn off mouse integration in PuTTY
 set mouse-=a
+
+" Set default shell
+set shell=$SHELL
