@@ -5,12 +5,24 @@ colorscheme solarized
 set background=dark
 
 set tabstop=8
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=2
+set shiftwidth=2
 set expandtab
+set cinoptions=N-s,g1,h1,l1,t0,i4,+4,(0,w1,W4
+set colorcolumn=80
+set textwidth=80
+set wrap
+
+"set cinoptions=h1,l1,g1,t0,i4,+4,(0,w1,W4
 
 " Turn off mouse integration in PuTTY
 set mouse-=a
 
 " Set default shell
 set shell=$SHELL
+
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
+
+map <C-L> :pyf /Users/aega/d/bin/clang-format.py<CR>
+imap <C-L> <ESC>:pyf /Users/aega/d/bin/clang-format.py<CR>i

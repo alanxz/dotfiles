@@ -16,7 +16,7 @@ export CLICOLOR=1
 # Use the default
 #export LSCOLORS=exfxcxdxbxegedabagacad
 
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH:$HOME/d/bin
 
 # Truncates PWD to pwdmaxlen for use in a prompt
 short_pwd() {
