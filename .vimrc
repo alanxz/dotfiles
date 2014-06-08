@@ -21,6 +21,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-fugitive'
 
 Plugin 'scrooloose/syntastic'
+Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-endwise'
 
 Plugin 'altercation/vim-colors-solarized'
@@ -30,15 +31,15 @@ if filereadable(expand('~/.at_work.vim'))
 else
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'mhinz/vim-signify'
-  Plugin 'google/maktaba'
-  Plugin 'google/glaive'
+  "Plugin 'google/maktaba'
+  "Plugin 'google/glaive'
 endif
 
-Plugin 'fatih/vim-go'
-Plugin 'klen/python-mode'
+"Plugin 'fatih/vim-go'
+"Plugin 'klen/python-mode'
 
 call vundle#end()
-call glaive#Install()
+"call glaive#Install()
 
 colorscheme solarized
 set background=dark
@@ -70,13 +71,13 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 " Syntastic ------------------------------------------------------{{{2
 
-let g:syntasic_always_populate_loc_list = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntasic_always_populate_loc_list = 1
+"let g:syntastic_check_on_wq = 0
 
 " UltiSnips ----------------------------------------------------- {{{2
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsExpandTrigger='<c-j>'
+let g:UltiSnipsJumpForwardTrigger='<c-j>'
+let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 
 filetype plugin indent on
 syntax on
