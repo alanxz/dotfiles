@@ -33,6 +33,9 @@ else
   Plugin 'mhinz/vim-signify'
   "Plugin 'google/maktaba'
   "Plugin 'google/glaive'
+
+  noremap <c-i> :pyf ~/bin/clang-format.py<cr>
+  inoremap <c-i> <esc>:pyf ~/bin/clang-format.py<cr>i
 endif
 
 "Plugin 'fatih/vim-go'
