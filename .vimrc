@@ -44,6 +44,9 @@ endif
 call vundle#end()
 "call glaive#Install()
 
+let mapleader=','
+noremap ,. ,
+
 colorscheme solarized
 set background=dark
 
@@ -74,13 +77,18 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 " Syntastic ------------------------------------------------------{{{2
 
-"let g:syntasic_always_populate_loc_list = 1
-"let g:syntastic_check_on_wq = 0
+let g:syntasic_always_populate_loc_list = 1
+let g:syntastic_check_on_wq = 0
 
 " UltiSnips ----------------------------------------------------- {{{2
 let g:UltiSnipsExpandTrigger='<c-j>'
 let g:UltiSnipsJumpForwardTrigger='<c-j>'
 let g:UltiSnipsJumpBackwardTrigger='<c-k>'
+
+set textwidth=80
+
+set colorcolumn=+1
+set cursorline
 
 filetype plugin indent on
 syntax on
