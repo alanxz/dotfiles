@@ -51,6 +51,7 @@ colorscheme solarized
 set background=dark
 
 set tabstop=8 softtabstop=2 shiftwidth=2 expandtab smarttab
+set cinoptions=N-s,g1,h1,l1,t0,i4,+4,(0,w1,W4
 set list
 
 set wrap
