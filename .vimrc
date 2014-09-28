@@ -1,4 +1,3 @@
-
 set nocompatible
 
 filetype off
@@ -23,32 +22,26 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-endwise'
 
-Plugin 'wting/rust.vim'
-
 Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 
-if filereadable(expand('~/.at_work.vim'))
-  source ~/.at_work.vim
+Plugin 'kien/ctrlp.vim'
+
+if filereadable(expand('~/.vimrc.at_work.vim'))
+  source ~/.vimrc.at_work.vim
 else
   Plugin 'tpope/vim-fugitive'
   Plugin 'mhinz/vim-signify'
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'majutsushi/tagbar'
-  "Plugin 'google/maktaba'
-  "Plugin 'google/glaive'
 
   noremap <c-i> :pyf ~/bin/clang-format.py<cr>
   inoremap <c-i> <esc>:pyf ~/bin/clang-format.py<cr>i
 endif
 
-"Plugin 'fatih/vim-go'
-"Plugin 'klen/python-mode'
-
 call vundle#end()
-"call glaive#Install()
 
 let mapleader=','
 noremap ,. ,
@@ -65,7 +58,10 @@ set linebreak
 set autoindent
 
 set number
+set hlsearch
 set showcmd
+
+set wildmode=longest,list,full
 
 set directory=~/tmp,/var/tmp,/tmp,$TEMP
 set undodir=~/tmp,/var/tmp,/tmp,$TEMP
@@ -84,6 +80,7 @@ let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
+let g:airline#extensions#tabline#enabled = 1
 
 " Syntastic ------------------------------------------------------{{{2
 
@@ -95,7 +92,7 @@ let g:UltiSnipsExpandTrigger='<c-j>'
 let g:UltiSnipsJumpForwardTrigger='<c-j>'
 let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 
-" TabBar -------------------------------------------------------- {{{2
+" TagBar -------------------------------------------------------- {{{2
 let g:tagbar_left=1
 let g:tagbar_sort=0
 
@@ -112,12 +109,22 @@ let g:session_autosave        = 'yes'
 let g:session_default_to_last = 'yes'
 let g:session_directory       = '~/tmp/vim/sessions'
 
+" CtrlP -------------------------------------------------------- {{{2
+set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*,CMakeFiles
+nnoremap <leader>t :CtrlP<cr>
+nnoremap <leader>n :CtrlPBuffer<cr>
+nnoremap <leader>' :CtrlPClearAllCaches<cr>
+
+" Customization ------------------------------------------------ {{{2
+nnoremap <tab> <c-w>
+
 set textwidth=80
 
 set colorcolumn=+1
 set cursorline
 
-
+" Make switching between panes painless.
+noremap <tab> <c-w>
 
 filetype plugin indent on
 syntax on
