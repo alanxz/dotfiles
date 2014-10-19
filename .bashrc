@@ -6,9 +6,6 @@
 # If not running interactively, don't do anything
 case $- in
   *i*)
-    # Flush history to disk before each command is run instead of waiting for
-    # bash to exit.
-    trap 'history -a; history -n;' DEBUG
     ;;
   *) return;;
 esac
@@ -27,6 +24,15 @@ HISTSIZE=1000000
 HISTFILESIZE=2000000
 HISTTIMEFORMAT="%F %T"
 
+case $- in
+  *i*)
+    # Flush history to disk before each command is run instead of waiting for
+    # bash to exit.
+    trap 'history -a; history -n;' DEBUG
+  ;;
+  *)
+  ;;
+esac
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
