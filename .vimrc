@@ -37,8 +37,8 @@ else
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'majutsushi/tagbar'
 
-  noremap <c-i> :pyf ~/bin/clang-format.py<cr>
-  inoremap <c-i> <esc>:pyf ~/bin/clang-format.py<cr>i
+  noremap <C-K> :pyf $HOME/bin/clang-format.py<CR>
+  inoremap <C-K> <ESC>:pyf $HOME/bin/clang-format.py<CR>i
 endif
 
 call vundle#end()
@@ -83,7 +83,6 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:airline#extensions#tabline#enabled = 1
 
 " Syntastic ------------------------------------------------------{{{2
-
 let g:syntasic_always_populate_loc_list = 1
 let g:syntastic_check_on_wq = 0
 
