@@ -68,6 +68,9 @@ set undodir=~/tmp,/var/tmp,/tmp,$TEMP
 
 set tags=./tags;/
 
+" Enable spell checking.
+set spell
+
 " Airline config ------------------------------------------------ {{{2
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
