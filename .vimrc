@@ -31,17 +31,23 @@ Plugin 'kien/ctrlp.vim'
 
 if filereadable(expand('~/.vimrc.at_work.vim'))
   source ~/.vimrc.at_work.vim
+  call vundle#end()
 else
+  Plugin 'google/vim-maktaba'
+  Plugin 'google/vim-codefmt'
+  Plugin 'google/vim-glaive'
   Plugin 'tpope/vim-fugitive'
+  Plugin 'fatih/vim-go'
   Plugin 'mhinz/vim-signify'
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'majutsushi/tagbar'
 
-  noremap <C-K> :pyf $HOME/bin/clang-format.py<CR>
-  inoremap <C-K> <ESC>:pyf $HOME/bin/clang-format.py<CR>i
-endif
+  call vundle#end()
 
-call vundle#end()
+  call glaive#Install()
+  Glaive codefmt plugin[mappings]
+
+endif
 
 let mapleader=','
 noremap ,. ,
@@ -70,6 +76,8 @@ set tags=./tags;/
 
 " Enable spell checking.
 set spell
+
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Airline config ------------------------------------------------ {{{2
 if !exists('g:airline_symbols')
@@ -116,6 +124,20 @@ set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*,CMakeFil
 nnoremap <leader>t :CtrlP<cr>
 nnoremap <leader>n :CtrlPBuffer<cr>
 nnoremap <leader>' :CtrlPClearAllCaches<cr>
+
+" vim-go ------------------------------------------------------- {{{2
+au FileType go nmap <leader>br <Plug>(go-run)
+au FileType go nmap <leader>bb <Plug>(go-build)
+au FileType go nmap <leader>bt <Plug>(go-test)
+au FileType go nmap <leader>bc <Plug>(go-coverage)
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+let g:go_fmt_command = "goimports"
 
 " Customization ------------------------------------------------ {{{2
 nnoremap <tab> <c-w>
