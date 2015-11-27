@@ -24,6 +24,9 @@ Plug 'kien/ctrlp.vim'
 
 Plug 'google/vim-searchindex'
 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 if filereadable(expand('~/.vimrc.at_work.vim'))
   source ~/.vimrc.at_work.vim
   call plug#end()
