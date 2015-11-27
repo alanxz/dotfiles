@@ -200,4 +200,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+export PATH=$PATH:$HOME/.local/bin
+
+export MANPATH=$MANPATH:$HOME/.local/man
+
 export EDITOR=vim
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
