@@ -22,6 +22,8 @@ Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 
 Plug 'kien/ctrlp.vim'
 
+Plug 'google/vim-searchindex'
+
 if filereadable(expand('~/.vimrc.at_work.vim'))
   source ~/.vimrc.at_work.vim
   call plug#end()
