@@ -2,47 +2,41 @@ set nocompatible
 
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'Valloric/ListToggle'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Plug 'scrooloose/syntastic'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-endwise'
 
-Plugin 'scrooloose/syntastic'
-Plugin 'Raimondi/delimitMate'
-Plugin 'tpope/vim-endwise'
+Plug 'altercation/vim-colors-solarized'
 
-Plugin 'altercation/vim-colors-solarized'
+Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 
 if filereadable(expand('~/.vimrc.at_work.vim'))
   source ~/.vimrc.at_work.vim
-  call vundle#end()
+  call plug#end()
 else
-  Plugin 'google/vim-maktaba'
-  Plugin 'google/vim-codefmt'
-  Plugin 'google/vim-glaive'
-  Plugin 'tpope/vim-fugitive'
-  Plugin 'fatih/vim-go'
-  Plugin 'mhinz/vim-signify'
-  Plugin 'Valloric/YouCompleteMe'
-  Plugin 'majutsushi/tagbar'
+  Plug 'google/vim-maktaba'
+  Plug 'google/vim-codefmt'
+  Plug 'google/vim-glaive'
+  Plug 'tpope/vim-fugitive'
+  Plug 'fatih/vim-go'
+  Plug 'mhinz/vim-signify'
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+  Plug 'majutsushi/tagbar'
 
-  call vundle#end()
+  call plug#end()
 
   call glaive#Install()
   Glaive codefmt plugin[mappings]
