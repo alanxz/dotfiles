@@ -14,8 +14,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 Plug 'scrooloose/syntastic'
-Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-endwise'
+Plug 'cohama/lexima.vim'
 
 Plug 'altercation/vim-colors-solarized'
 
