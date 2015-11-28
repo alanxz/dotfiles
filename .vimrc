@@ -4,12 +4,15 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
+" Sensible defaults
+Plug 'tpope/vim-sensible'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-eunuch'
 
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
