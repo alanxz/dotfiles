@@ -70,6 +70,8 @@ set number
 set hlsearch
 set showcmd
 
+set spell
+
 set wildmode=longest,list,full
 
 set directory=~/tmp,/var/tmp,/tmp,$TEMP
