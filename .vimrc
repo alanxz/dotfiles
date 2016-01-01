@@ -17,7 +17,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 Plug 'scrooloose/syntastic'
-Plug 'cohama/lexima.vim'
+Plug 'Raimondi/delimitMate'
 
 Plug 'altercation/vim-colors-solarized'
 
@@ -101,6 +101,12 @@ let g:airline#extensions#tabline#enabled = 1
 " Syntastic ------------------------------------------------------{{{2
 let g:syntasic_always_populate_loc_list = 1
 let g:syntastic_check_on_wq = 0
+
+" delimitMate ----------------------------------------------------{{{2
+let delimitMate_expand_cr = 2
+let delimitMate_jump_expansion = 1
+let delimitMate_balance_matchpairs = 1
+
 
 " UltiSnips ----------------------------------------------------- {{{2
 let g:UltiSnipsExpandTrigger='<c-j>'
