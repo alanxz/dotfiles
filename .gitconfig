@@ -1,8 +1,10 @@
 [user]
 	email = alan.antonuk@gmail.com
 	name = Alan Antonuk
+	signingkey = 0873DB44C172113F
 [core]
 	autocrlf = input
+	editor = vim
 [color]
 	ui = auto
 [merge]
@@ -16,3 +18,5 @@
 	unassume = update-index --no-assume-unchanged
 	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
 	pr = "!f() { git fetch origin refs/pull/$1/head:remotes/origin/pr/$1; } ; f"
+[commit]
+	gpgsign = true
